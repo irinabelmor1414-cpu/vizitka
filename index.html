@@ -213,9 +213,11 @@
   }
   @media (max-width:520px){
     .card,.card.feature{grid-template-columns:1fr;gap:0}
-    .thumb,.card.feature .thumb{width:calc(100% + 28px);height:168px;
+    .thumb,.card.feature .thumb{width:calc(100% + 28px);height:auto;aspect-ratio:1/1;
       border-radius:11px 11px 0 0;margin:-14px -14px 12px}
-    .card.feature .thumb{height:190px}
+    .thumb img{object-fit:cover}
+    .thumb.contain{background:#fff}
+    .thumb.contain img{object-fit:contain;padding:14px}
     .cbody{padding-right:0}
     .price{top:8px;right:8px;background:rgba(20,17,14,.62);color:#f4ece2;
       border-color:transparent;backdrop-filter:blur(4px)}
